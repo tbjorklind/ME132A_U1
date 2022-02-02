@@ -44,15 +44,25 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number
 //      Log to the console the current value of #input_test_1. It should
 //      be 13, if you managed the previous E correctly.
 
+let input_test_1 = document.querySelector("#input_test_1").value;
 
 // E7:  Add a button <button> to the HTML-file.
 //      Give it the id "button_test_1"
 
+let buttonClick = document.querySelector("#button_test_1");
 
 // E8:  Add an event listener to the button so that when the user clicks on it
 //      the browser logs the current value of the input field on the console.
 //      Test this by manually changing the value of the input field. That is,
 //      by going to the webpage and changing that value.
+
+
+buttonClick.addEventListener("click", function () {
+    let Value = document.getElementById("input_test_1").value;
+    console.log(Value)
+    f1();
+});
+
 
 
 // E9:  NOTE that the value from the input field is a string, even if the input
@@ -67,12 +77,16 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number
 //      So parseInt("1") will return the number 1
 //      What will be logged in the lines below?
 let a = "23";
-// console.log( parseInt( a ) + 1 );
-// console.log( a + 1 );
+// console.log( parseInt( a ) + 1 ); answer: 24
+// console.log( a + 1 ); answer: 231
 
 
 // E11: Code a function (F1) that adds 23 to the number in the input field and
 //      logs the result to the console.
+function f1() {
+    let b = document.querySelector("#input_test_1").value;
+    console.log(parseInt(b) + parseInt(a))
+};
 
 
 // E12: Now make sure that F1 is called when the user clicks on #button_test_1
@@ -86,5 +100,5 @@ let a = "23";
 //    one with the value of the input field
 //    another one with 23 + the numberic value of the input field
 //  every time the user clicks on the button.
-//  Well done!
+//  Well done! Thank u!
 
