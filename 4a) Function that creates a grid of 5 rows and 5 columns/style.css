@@ -1,0 +1,16 @@
+#gridContainer {
+  display: grid;
+  width: 50vh;
+  height: 50vh;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1vh;
+}
+
+#gridContainer > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: grey;
+}

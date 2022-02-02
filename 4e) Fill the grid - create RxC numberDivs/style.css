@@ -1,0 +1,49 @@
+
+body {
+  margin: 0px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#top > div {
+  display: flex;
+  flex-basis: 6vh;
+  margin: 2vh;
+  justify-content: center;
+}
+
+#top > div > div {
+  margin: 0px 2vh;
+}
+
+#grid {
+  margin: 2vh;
+  padding: 1vh;
+  flex-grow: 1;
+  display: grid;
+  gap: 1vh;
+
+  font-size: 3vh;
+
+  border: 1px solid grey;
+}
+
+#grid > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: grey;
+}
+
+#grid > div.selected {
+  background-color: aqua;
+  color: navy;
+}
+
+#grid > div:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px black;
+}
+

@@ -1,0 +1,87 @@
+Here's a few ideas that you should try to solve.
+You do NOT need to solve them to pass the examination.
+Solve them at your own leasure, before or after
+the deadline. You do not need to send me anything.
+
+I will publish the solutions to all of these after the deadline.
+
+
+
+
+1) Font Size.
+Code a function that sets the font size of the random numbers in the numbersDiv depending on 
+how many rows there are in the grid. As the user can decide how many rows there are, we
+cannot set this number in advance. So, at some point before creating the new
+numberDivs, you must set the font size, which depends on how many columns there are.
+If you truly do not like maths, I have added, at the end of this document, a
+formula that could work. It is very simple, try first yourself!
+
+Note that the number of columns also plays a role in how large the font can be. So, ideally
+we would need to check which one sets the limits: the number of rows or the number of
+columns? This becomes a bit complex and I do not expect you to solve it. But if you want
+to give it a try, be my guest. There will also be a solution for this.
+
+
+
+
+2) Avoid the button "MAKE NEW GRID"
+It would probably feel more natural if, instead of the user needing to click on the button to
+create a new grid, a new grid was automatically created every time the user changes the value
+of one of the input fields.
+Everytime the user changes the value of an input, a certain event is triggered. You need to
+find out whih event is that, and then add an eventListener for it so that things happen
+when the value changes.
+So:
+a) Which event is that? (find out on the internet. Solution at the end of this document)
+b) What should happen when the event is triggered?
+c) How does the code need to change?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PART SOLUTIONS
+
+**************
+IDEA 1: Formula for Font Size
+let fs = 30 / R; // R is the number of rows
+let fsString = fs + "vh"; // This concatenation creates a string.
+elementRef.style.fontSize = fsString;
+Whether 30 is or not a good number for you depends on the font-family
+that you are using for the random numbers. The idea is that the more rows
+there are, the smaller the font will be.
+
+or, in one line:
+elementRef.style.fontSize = (30 / R) + "vh"; // concatenation
+elementRef.style.fontSize = `${30/R}vh`; // template literals
+
+
+
+***************
+IDEA 2: Name of event
+Its the event input. So:
+
+elementRef.addEventListener("input", function () {
+  // your code here
+});
+
+
+
+
