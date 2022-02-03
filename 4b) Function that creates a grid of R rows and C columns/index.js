@@ -1,7 +1,21 @@
 "use strict";
 
 
+
+function gridMaker (gridContainer, R, C) {
+
+    gridContainer.style.display ="grid";
+    gridContainer.style["gridTemplateRows"] = `repeat(${R}, 1fr)`;
+    gridContainer.style["gridTemplateColumns"] = `repeat(${C}, 1fr)`;
+}
+
+gridMaker( document.querySelector("#grid"), 2, 6 );
+
+
 /*
+function createAndAppend ( color ) {
+  let e = document.createElement( "div" );
+  e.style.backgroundColor = color;
 
 E1
 Study the HTML-file in this exercise.

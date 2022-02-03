@@ -14,5 +14,33 @@ VIDEO:  Record a video where you explain the two different ways (see above) of c
         amount of numberDivs. The video should be called loopExplainer
 
 */
+let valueRows = document.getElementById ("inputRows").value;
+let valueColumns = document.getElementById ("inputCols").value;
 
+
+
+function gridMaker (gridContainer, R, C) {
+
+        gridContainer.style.display ="grid";
+        gridContainer.style["gridTemplateRows"] = `repeat(${R}, 1fr)`;
+        gridContainer.style["gridTemplateColumns"] = `repeat(${C}, 1fr)`;
+
+        for ( let i = 0; i < C; i++ ) {
+                let numberDiv = createNumberDiv();
+                gridContainer.appendChild(numberDiv);
+
+                for ( let i = 0; i < R; i++ ) {
+                        let numberDiv = createNumberDiv();
+                        gridContainer.appendChild(numberDiv);
+        };
+        };
+        
+};
+console.log(gridMaker( document.querySelector("#grid"), valueRows, valueColumns));
+
+    function createNumberDiv () {
+        let divs = document.createElement ("div");
+        divs.innerHTML = Math.floor( 99 * Math.random ());
+        return divs;
+    };
 

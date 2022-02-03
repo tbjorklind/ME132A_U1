@@ -9,9 +9,25 @@ in your JS-file from the console. Check the video.
 
 */
 
-function testConsole (p1) {
-  document.querySelector("body").style.backgroundColor = p1;
+// function testConsole (p1) {
+//   document.querySelector("body").style.backgroundColor = p1;
+// }
+
+let containerRef = document.querySelector ("#gridContainer");
+
+for (let i = 0 ; i < 25 ; i++) {
+
+    let divs = document.createElement ("div");
+    divs.innerHTML = F25(100);
+
+    containerRef.appendChild (divs);
 }
+
+function F25 (max) {
+  return Math.floor( max * Math.random () );
+}
+
+console.log ()
 
 
 /*
