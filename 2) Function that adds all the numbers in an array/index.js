@@ -61,3 +61,6 @@ function adder (_arr) {
 
 }
 console.log (adder(a1))
+
+
+// 
