@@ -10,8 +10,43 @@ Now we will add code so that we can select and deselect numbers
 from the grid by clicking on them.
 
 */
+function gridMaker (gridContainer, R, C) {
+
+        gridContainer.style.display ="grid";
+        gridContainer.style["gridTemplateRows"] = `repeat(${R}, 1fr)`;
+        gridContainer.style["gridTemplateColumns"] = `repeat(${C}, 1fr)`;
+
+        gridContainer.innerHTML = "";
+
+        for ( let i = 0; i < C; i++ ) {
+                for ( let ii = 0; ii < R; ii++ ) {
+                        gridContainer.appendChild(createNumberDiv ());
+        };
+        };
+}
+
+    function createNumberDiv () {
+        let divs = document.createElement ("div");
+        divs.innerHTML = Math.floor( 99 * Math.random ());
+        divs.addEventListener ("click", function () {
+        divs.classList.toggle ("selected");
+
+    });
+        return divs;
+    };
 
 
+    document.querySelector ("button").addEventListener ("click", function () {
+        gridMaker (
+            document.querySelector("#grid"),
+            document.getElementById ("inputRows").value,
+            document.getElementById ("inputCols").value
+        )
+});
+
+
+document.onload = gridMaker(document.querySelector("#grid"), document.querySelector("#inputRows").value, document.querySelector("#inputCols").value);
+window.onload = gridMaker(document.querySelector("#grid"), document.querySelector("#inputRows").value, document.querySelector("#inputCols").value);
 /*
 
 STEP 1
@@ -20,7 +55,6 @@ Add CSS-rules for .selected to the CSS-file. A change of
 background-color and color is enough but feel free!
 
 */
-
 
 /*
 
@@ -32,7 +66,6 @@ or here:
 https://www.w3schools.com/howto/howto_js_toggle_class.asp
 
 */
-
 
 
 /*
@@ -50,5 +83,3 @@ The only thing the eventListener needs to do (so far) is to toggle the class "se
 the classList.
 
 */
-
-
