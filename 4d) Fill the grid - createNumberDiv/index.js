@@ -25,4 +25,4 @@ function createNumberDiv () {
 
 };
     // createNumberDiv (100);
-    document.querySelector("body").appendChild( createNumberDiv() );
+     document.querySelector("body").appendChild( createNumberDiv() );

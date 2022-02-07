@@ -25,17 +25,26 @@ function gridMaker (gridContainer, R, C) {
         gridContainer.style["gridTemplateRows"] = `repeat(${R}, 1fr)`;
         gridContainer.style["gridTemplateColumns"] = `repeat(${C}, 1fr)`;
 
-        for ( let i = 0; i < C; i++ ) {
-                let numberDiv = createNumberDiv();
-                gridContainer.appendChild(numberDiv);
+        gridContainer.innerHTML = "";
 
-                for ( let i = 0; i < R; i++ ) {
-                        let numberDiv = createNumberDiv();
-                        gridContainer.appendChild(numberDiv);
+        for ( let i = 0; i < C; i++ ) {
+                for ( let ii = 0; ii < R; ii++ ) {
+                        gridContainer.appendChild(createNumberDiv ());
         };
         };
-        
 };
+
+// function gridMaker(gridContainer, C, R){
+        
+//         gridContainer.style.display = "grid";
+//         gridContainer.style["grid-template-columns"] = `repeat(${R}, 1fr)`;
+//         gridContainer.style["grid-template-rows"] = `repeat(${C}, 1fr)`;
+        
+//         for(let i = 0; i < C * R; i++){
+//                 gridContainer.appendChild(createNumberDiv())
+//         }
+// };
+
 console.log(gridMaker( document.querySelector("#grid"), valueRows, valueColumns));
 
     function createNumberDiv () {
@@ -43,4 +52,3 @@ console.log(gridMaker( document.querySelector("#grid"), valueRows, valueColumns)
         divs.innerHTML = Math.floor( 99 * Math.random ());
         return divs;
     };
-

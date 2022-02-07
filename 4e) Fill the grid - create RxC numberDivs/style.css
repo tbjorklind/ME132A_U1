@@ -38,8 +38,8 @@ body {
 }
 
 #grid > div.selected {
-  background-color: aqua;
-  color: navy;
+  background-color: rgb(160, 158, 134);
+  color: rgb(87, 76, 56);
 }
 
 #grid > div:hover {
