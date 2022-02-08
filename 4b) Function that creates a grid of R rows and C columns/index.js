@@ -1,18 +1,14 @@
-"use strict";
-
-
+'use strict'
 
 function gridMaker (gridContainer, R, C) {
-
-    gridContainer.style.display ="grid";
-    gridContainer.style.height ="50vh";
-    gridContainer.style.width ="50vh";
-    gridContainer.style["gridTemplateRows"] = `repeat(${R}, 1fr)`;
-    gridContainer.style["gridTemplateColumns"] = `repeat(${C}, 1fr)`;
+  gridContainer.style.display = 'grid'
+  gridContainer.style.height = '50vh'
+  gridContainer.style.width = '50vh'
+  gridContainer.style['gridTemplateRows'] = `repeat(${R}, 1fr)`
+  gridContainer.style['gridTemplateColumns'] = `repeat(${C}, 1fr)`
 }
 
-gridMaker( document.querySelector("#grid"), 2, 6 );
-
+gridMaker(document.querySelector('#grid'), 2, 6)
 
 /*
 function createAndAppend ( color ) {
@@ -42,4 +38,3 @@ The HTML-element #grid will however be empty since we have not appended any othe
 
 
 */
-

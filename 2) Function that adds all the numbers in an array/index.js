@@ -1,4 +1,4 @@
-"use strict";
+'use strict'
 
 /*
 
@@ -12,18 +12,16 @@ adder_three([1, 1, 1]) should return 3
 adder_three([2, 1, -2]) should return 1
 */
 
-
-let a1 = [1, 2, 3];
+let a1 = [1, 2, 3]
 // console.log( adder_three( a1 ) ); // this logs 6 since 1 + 2 + 3 is 6
 
-function adder_three ( _array ) {
-  let sum = 0;
-  for ( let i = 0; i < 3; i++ ) { 
-    sum = sum + _array[i];
+function adder_three (_array) {
+  let sum = 0
+  for (let i = 0; i < 3; i++) {
+    sum = sum + _array[i]
   }
-  return sum;
+  return sum
 }
-
 
 /*
 
@@ -53,14 +51,12 @@ VIDEO:  Make a video where you explain how adder works line by line. Max 3 minut
 */
 
 function adder (_arr) {
-  let summ = 0;
-  for (let i = 0 ; i < _arr.length ; i++){
-    summ = summ +_arr[i];
+  let summ = 0
+  for (let i = 0; i < _arr.length; i++) {
+    summ = summ + _arr[i]
   }
-  return summ;
-
+  return summ
 }
-console.log (adder(a1))
+console.log(adder(a1))
 
-
-// 
+//

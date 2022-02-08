@@ -1,5 +1,4 @@
-"use strict";
-
+'use strict'
 
 /*
 
@@ -19,10 +18,9 @@ This must append a div with a random number to the body each time it is called.
 */
 
 function createNumberDiv () {
-    let divs = document.createElement ("div");
-    divs.innerHTML = Math.floor( 99 * Math.random ());
-    return divs;
-
-};
-    // createNumberDiv (100);
-     document.querySelector("body").appendChild( createNumberDiv() );
+  let divs = document.createElement('div')
+  divs.innerHTML = Math.floor(99 * Math.random())
+  return divs
+}
+// createNumberDiv (100);
+document.querySelector('body').appendChild(createNumberDiv())

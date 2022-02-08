@@ -1,5 +1,4 @@
-"use strict";
-
+'use strict'
 
 /*
 
@@ -14,41 +13,38 @@ VIDEO:  Record a video where you explain the two different ways (see above) of c
         amount of numberDivs. The video should be called loopExplainer
 
 */
-let valueRows = document.getElementById ("inputRows").value;
-let valueColumns = document.getElementById ("inputCols").value;
-
-
+let valueRows = document.getElementById('inputRows').value
+let valueColumns = document.getElementById('inputCols').value
 
 function gridMaker (gridContainer, R, C) {
+  gridContainer.style.display = 'grid'
+  gridContainer.style['gridTemplateRows'] = `repeat(${R}, 1fr)`
+  gridContainer.style['gridTemplateColumns'] = `repeat(${C}, 1fr)`
 
-        gridContainer.style.display ="grid";
-        gridContainer.style["gridTemplateRows"] = `repeat(${R}, 1fr)`;
-        gridContainer.style["gridTemplateColumns"] = `repeat(${C}, 1fr)`;
+  gridContainer.innerHTML = ''
 
-        gridContainer.innerHTML = "";
-
-        for ( let i = 0; i < C; i++ ) {
-                for ( let ii = 0; ii < R; ii++ ) {
-                        gridContainer.appendChild(createNumberDiv ());
-        };
-        };
-};
+  for (let i = 0; i < C; i++) {
+    for (let ii = 0; ii < R; ii++) {
+      gridContainer.appendChild(createNumberDiv())
+    }
+  }
+}
 
 // function gridMaker(gridContainer, C, R){
-        
+
 //         gridContainer.style.display = "grid";
 //         gridContainer.style["grid-template-columns"] = `repeat(${R}, 1fr)`;
 //         gridContainer.style["grid-template-rows"] = `repeat(${C}, 1fr)`;
-        
+
 //         for(let i = 0; i < C * R; i++){
 //                 gridContainer.appendChild(createNumberDiv())
 //         }
 // };
 
-console.log(gridMaker( document.querySelector("#grid"), valueRows, valueColumns));
+console.log(gridMaker(document.querySelector('#grid'), valueRows, valueColumns))
 
-    function createNumberDiv () {
-        let divs = document.createElement ("div");
-        divs.innerHTML = Math.floor( 99 * Math.random ());
-        return divs;
-    };
+function createNumberDiv () {
+  let divs = document.createElement('div')
+  divs.innerHTML = Math.floor(99 * Math.random())
+  return divs
+}

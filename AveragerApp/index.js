@@ -4,7 +4,7 @@
 // Don't forget to include your CSS-file in the folder
 
 // Include the link to your Github Repository here:
-// Link:
+// Link: https://github.com/tbjorklind/ME132A_U1
 
 // GLOBAL VARIABLES
 // None allowed

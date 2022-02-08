@@ -54,17 +54,17 @@ document.querySelector('button').addEventListener('click', function () {
   )
 })
 
-document.onload = gridMaker(
-  document.querySelector('#grid'),
-  document.querySelector('#inputRows').value,
-  document.querySelector('#inputCols').value
-)
+// document.onload = gridMaker(
+//   document.querySelector('#grid'),
+//   document.querySelector('#inputRows').value,
+//   document.querySelector('#inputCols').value
+// )
 
-window.onload = gridMaker(
-  document.querySelector('#grid'),
-  document.querySelector('#inputRows').value,
-  document.querySelector('#inputCols').value
-)
+// window.onload = gridMaker(
+//   document.querySelector('#grid'),
+//   document.querySelector('#inputRows').value,
+//   document.querySelector('#inputCols').value
+// )
 
 /*
 
@@ -121,8 +121,7 @@ function createNumberDiv () {
   divs.innerHTML = Math.floor(99 * Math.random())
   divs.addEventListener('click', function () {
     divs.classList.toggle('selected')
-
-    divs.addEventListener('click', updateResults('selected'))
+    updateResults('selected')
   })
   return divs
 }
@@ -145,7 +144,6 @@ function updateResults (className) {
   let array = getArrayOfSelectedNumbers(className)
 
   let selected = array.join(', ')
-
   let amount = array.length
   let sum = adder(array)
   let average = roundString(averg(array), 1)

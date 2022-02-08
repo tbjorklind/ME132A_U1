@@ -1,4 +1,4 @@
-"use strict";
+'use strict'
 
 /*
 
@@ -23,7 +23,6 @@ average = sum of all numbers / how many numbers
 
 */
 
-
 /*
 
 From a previous exercise you have a function (adder) that returns the sum of all the elements of an array.
@@ -47,36 +46,23 @@ VIDEO:  Record a video where you explain how averg works line by line. Max 3 min
 // // Copy your earlier function here
 // function adder ( _array ) {}
 
-let a1 = [1, 2, 3, 4, 5];
+let a1 = [1, 2, 3, 4, 5]
 
 function adder (_arr) {
-  let summ = 0;
-  for (let i = 0 ; i < _arr.length ; i++){
-    summ = summ +_arr[i];
+  let summ = 0
+  for (let i = 0; i < _arr.length; i++) {
+    summ = summ + _arr[i]
   }
-  return summ;
-
+  return summ
 }
-console.log (adder(a1))
+console.log(adder(a1))
 
 // function averg ( _array ) {
 //   // in here you must use adder
 // }
-  function averg (_arr) {
-    let sum = adder(a1) / _arr.length;
+function averg (_arr) {
+  let sum = adder(a1) / _arr.length
 
-    return sum;
-  }
-  console.log (averg(a1))
-
-// function averg (_arr) {
-//   let sum = 0;
-//   for (let i = 0 ; i < _arr.length ; i++){
-//     sum = sum +_arr[i] / _arr.length;
-//   }
-//   return sum;
-
-// }
-// console.log (averg(b1))
-
-
+  return sum
+}
+console.log(averg(a1))

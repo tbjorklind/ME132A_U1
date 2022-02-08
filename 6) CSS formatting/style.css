@@ -5,76 +5,75 @@
 }
 
 body {
-    margin: 0px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Abril Fatface', cursive;
-    font-size: 3vh;
-    background-color: var(--backColor);
-  }
-  
-  #top > div {
-    display: flex;
-    flex-basis: 6vh;
-    margin: 2vh;
-    justify-content: center;
-  }
-  
-  #top > div > div {
-    margin: 0px 2vh;
-  }
-  
-  button {
-    background-color: var(--darkColor);
-    height: 40px;
-    width: 20vw;
-    font-family: 'Abril Fatface', cursive;
-    font-size: 3vh;
-    border: 1px solid var(--darkColor);
-    padding: 0px;
+  margin: 0px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 3vh;
+  background-color: var(--backColor);
+}
 
+#top > div {
+  display: flex;
+  flex-basis: 6vh;
+  margin: 2vh;
+  justify-content: center;
+}
 
-  }
-  #grid {
-    margin: 2vh;
-    padding: 1vh;
-    flex-grow: 1;
-    display: grid;
-    gap: 1vh;
-  
-    font-size: 3vh;
-  
-    border: 1px solid var(--darkColor);
-  }
-  
-  #grid > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#top > div > div {
+  margin: 0px 2vh;
+}
 
-    background-color: var(--darkColor);
-  }
-  
-  #grid > div.selected {
-    background-color: var(--lightColor);
-  }
-  
-  #grid > div:hover {
-    cursor: pointer;
-    box-shadow: 0 0 10px var(--darkColor);
-  }
-  
+button {
+  background-color: var(--darkColor);
+  height: 40px;
+  width: 20vw;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 3vh;
+  border: 1px solid var(--darkColor);
+  padding: 0px;
+}
+#grid {
+  margin: 2vh;
+  padding: 1vh;
+  flex-grow: 1;
+  display: grid;
+  gap: 1vh;
+
+  font-size: 3vh;
+
+  border: 1px solid var(--darkColor);
+}
+
+#grid > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--darkColor);
+}
+
+#grid > div.selected {
+  background-color: var(--lightColor);
+}
+
+#grid > div:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--darkColor);
+}
+
 .selected {
-    background-color: var(--lightColor);
-    color: black;
-}  
+  background-color: var(--lightColor);
+  color: black;
+}
 
-#inputCols, #inputRows {
-    height: 36px;
-    width: 50px;
-    background-color: rgb(204, 196, 186);
-    font-family: 'Abril Fatface', cursive;
-    border: sienna 1px solid;
-    font-size: 3vh;
+#inputCols,
+#inputRows {
+  height: 36px;
+  width: 50px;
+  background-color: rgb(204, 196, 186);
+  font-family: 'Abril Fatface', cursive;
+  border: sienna 1px solid;
+  font-size: 3vh;
 }

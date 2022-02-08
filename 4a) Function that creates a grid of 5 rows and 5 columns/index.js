@@ -1,7 +1,7 @@
-"use strict";
+'use strict'
 
 function testConsole (p1) {
-  document.querySelector("body").style.backgroundColor = p1;
+  document.querySelector('body').style.backgroundColor = p1
 }
 /*
 
@@ -11,24 +11,22 @@ in your JS-file from the console. Check the video.
 
 */
 
-
 //
 
-
 function F25 (container) {
-for (let i = 0 ; i < 25 ; i++) {
-    let divs = document.createElement ("div");
-    divs.innerHTML = randomNumber(100);
-    container.appendChild (divs);
-
-}
+  for (let i = 0; i < 25; i++) {
+    let divs = document.createElement('div')
+    divs.innerHTML = randomNumber(100)
+    container.appendChild(divs)
+  }
 }
 
 function randomNumber (max) {
-  return Math.floor( max * Math.random () );
+  return Math.floor(max * Math.random())
 }
 
-console.log(F25 (document.querySelector ("#gridContainer")));
+console.log(F25)
+console.log(F25(document.querySelector('#gridContainer')))
 
 /*
 
